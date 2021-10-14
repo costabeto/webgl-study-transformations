@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Demo</title>
+    <link rel="stylesheet" href="./webgl.css" type="text/css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="webgl-demo.js" defer></script>
+  </head>
+
+  <body>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+
+    <div class="form">
+      <h3>Background</h3>
+      <input
+        type="color"
+        name="backgroundColorPicker"
+        id="backgroundColorPicker"
+      />
+
+      <h3>Positions</h3>
+      <label for="position1" id="position1Label"></label>
+      <input
+        onchange="drawOnChange()"
+        type="range"
+        step="0.5"
+        min="-5"
+        max="5"
+        name="position1"
+        id="position1"
+        placeholder="Position 1"
+        value="1.0"
+      />
+      <label for="position1" id="position2Label"></label>
+      <input
+        onchange="drawOnChange()"
+        type="range"
+        step="0.5"
+        min="-5"
+        max="5"
+        name="position2"
+        id="position2"
+        placeholder="Position 2"
+        value="1.0"
+      />
+      <label for="position1" id="position3Label"></label>
+      <input
+        onchange="drawOnChange()"
+        type="range"
+        step="0.5"
+        min="-5"
+        max="5"
+        name="position3"
+        id="position3"
+        placeholder="Position 3"
+        value="-1.0"
+      />
+      <label for="position1" id="position4Label"></label>
+      <input
+        onchange="drawOnChange()"
+        type="range"
+        step="0.5"
+        min="-5"
+        max="5"
+        name="position4"
+        id="position4"
+        placeholder="Position 4"
+        value="1.0"
+      />
+      <label for="position1" id="position5Label"></label>
+      <input
+        onchange="drawOnChange()"
+        type="range"
+        step="0.5"
+        min="-5"
+        max="5"
+        name="position5"
+        id="position5"
+        placeholder="Position 5"
+        value="1.0"
+      />
+      <label for="position1" id="position6Label"></label>
+      <input
+        onchange="drawOnChange()"
+        type="range"
+        step="0.5"
+        min="-5"
+        max="5"
+        name="position6"
+        id="position6"
+        placeholder="Position 6"
+        value="-1.0"
+      />
+      <label for="position1" id="position7Label"></label>
+      <input
+        onchange="drawOnChange()"
+        type="range"
+        step="0.5"
+        min="-5"
+        max="5"
+        name="position7"
+        id="position7"
+        placeholder="Position 7"
+        value="-1.0"
+      />
+      <label for="position1" id="position8Label"></label>
+      <input
+        onchange="drawOnChange()"
+        type="range"
+        step="0.5"
+        min="-5"
+        max="5"
+        name="position8"
+        id="position8"
+        placeholder="Position 8"
+        value="-1.0"
+      />
+
+      <button onclick="reset();">Reset</button>
+    </div>
+    <script>
+      function getSinglePosition(number) {
+        const pos = parseFloat(
+          document.getElementById(`position${number}`).value
+        );
+
+        return pos || 0;
+      }
+    </script>
+  </body>
+</html>
